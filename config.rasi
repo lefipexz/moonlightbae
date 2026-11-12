@@ -1,0 +1,125 @@
+* {
+
+    font: "Iosevka Nerd Font Propo 10";
+
+    g-spacing: 10px;
+    g-margin: 0;
+    g-padding: 8px;
+
+    b-color: #0d0d0dFF;
+    fg-color: #d8dee9FF;
+    fgp-color: #777777FF;
+
+    b-radius: 0px;
+
+    hl-color: #505050FF;
+    hlt-color: #d8dee9FF;
+
+    bg-alt: #222222FF;
+    border-inner: #060606FF;
+
+    wbg-color: #151515FF;
+    w-border: 1px solid;
+    w-border-color: #2a2a2aFF;
+    w-padding: 12px;
+}
+
+configuration {
+    modi: "drun,window";
+    show-icons: true;
+    display-drun: "";
+}
+
+listview {
+    columns: 1;
+    lines: 6;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: false;
+    background-color: @bg-alt;
+    padding: 0px;
+    border: 1px solid;
+    border-color: @border-inner;
+}
+
+window {
+    transparency: "real";
+    width: 420px;
+    border-radius: @b-radius;
+    background-color: @wbg-color;
+    border: @w-border;
+    border-color: @w-border-color;
+    padding: @w-padding;
+}
+
+prompt {
+    text-color: @fg-color;
+}
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: @g-spacing;
+    background-color: @bg-alt;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: @border-inner;
+}
+
+entry {
+    placeholder: "Pesquisar...";
+    text-color: @fg-color;
+    placeholder-color: @fgp-color;
+}
+
+mainbox {
+    spacing: 14px;
+    margin: @g-margin;
+    padding: @g-padding;
+    children: ["inputbar", "listview", "message"];
+}
+
+element {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    border: 0px solid;
+    border-radius: @b-radius;
+    border-color: @b-color;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element-icon {
+    size: 1.3em;
+}
+
+element-text {
+    vertical-align: 0.6;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element selected.active {
+    background-color: @hl-color;
+    text-color: @hlt-color;
+}
+
+element selected.normal {
+    background-color: @hl-color;
+    text-color: @hlt-color;
+}
+
+message {
+    background-color: transparent;
+    border: 0px solid;
+}
