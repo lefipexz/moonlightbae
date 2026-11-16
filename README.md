@@ -1,4 +1,4 @@
-Welcome to Moonlightbae
+## Welcome to Moonlightbae
 
 This is an Linux customization based on Ariana Grande album Dangerous Woman.
 The core of this 'ricing' is built with Debian 13, I3WM, Picom, Polybar and Rofi; 
